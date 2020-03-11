@@ -1,0 +1,32 @@
+﻿<UserControl x:Class="CommunityControlLibrary.Actions.ActionManagerControl"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:local="clr-namespace:CommunityControlLibrary.Actions"
+			 xmlns:actions="clr-namespace:CommunityViewModels.Actions;assembly=CommunityViewModels"
+			 mc:Ignorable="d" 
+             d:DesignHeight="500" d:DesignWidth="500"
+			 Background="Gainsboro"
+			 >
+	<d:UserControl.DataContext>
+		<actions:ActionManagerViewModel/>
+	</d:UserControl.DataContext>
+	<Grid>
+		<Grid.RowDefinitions>
+			<RowDefinition/>
+			<RowDefinition/>
+		</Grid.RowDefinitions>
+		<Grid.ColumnDefinitions>
+			<ColumnDefinition/>
+		</Grid.ColumnDefinitions>
+
+		<StackPanel Orientation="Horizontal" Grid.Row="0">
+			<TextBlock>Action Count:</TextBlock>
+			<TextBlock Text="{Binding Count}"/>
+		</StackPanel>
+
+		<ListView Grid.Row="1" ItemsSource="{Binding Actions}" />
+
+	</Grid>
+</UserControl>

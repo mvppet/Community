@@ -1,0 +1,55 @@
+﻿<UserControl x:Class="CommunityControlLibrary.BasicDwellerInfoTile"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+	        xmlns:Models="clr-namespace:CommunityViewModels;assembly=CommunityViewModels"
+             xmlns:local="clr-namespace:CommunityControlLibrary"
+             mc:Ignorable="d" 
+			Width="{Binding HealthOvalWidth}"
+			Height="{Binding HealthOvalHeight}"
+
+			 >
+	<d:UserControl.DataContext>
+		<Models:BasicDwellerViewModel />
+	</d:UserControl.DataContext>
+	<UserControl.Resources>
+		<Style TargetType="Label">
+			<Setter Property="FontWeight" Value="Bold"/>
+			<Setter Property="Margin" Value="0"/>
+			<Setter Property="Padding" Value="2,0,4,0"/>
+			<Setter Property="FontSize" Value="9"/>
+		</Style>
+		<Style TargetType="TextBlock">
+			<Setter Property="Margin" Value="0"/>
+			<Setter Property="Padding" Value="4,0,2,0"/>
+			<Setter Property="FontSize" Value="9"/>
+		</Style>
+	</UserControl.Resources>
+    <Grid>
+		<Grid.RowDefinitions>
+			<RowDefinition Height="*"/>
+		</Grid.RowDefinitions>
+		<Grid.ColumnDefinitions>
+			<ColumnDefinition />
+		</Grid.ColumnDefinitions>
+		<!--<Label Grid.Column="0" Grid.Row="0">ID</Label>
+		<Label Grid.Column="0" Grid.Row="1">Name</Label>-->
+		<!--<Label Grid.Column="0" Grid.Row="2">Position</Label>-->
+		<!--<Label Grid.Column="0" Grid.Row="3">Age</Label>-->
+
+		<Ellipse
+			Grid.Row="0" Grid.Column="0"
+			Fill="{Binding HealthColor}"
+			/>
+		<!--<Label Grid.Row="0" Grid.Column="0" Content="{Binding Dweller.Id}" />-->
+		<TextBlock Grid.Row="0" Grid.Column="0" Text="{Binding Dweller.Name}" VerticalAlignment="Center" HorizontalAlignment="Center" />
+		<!--<Label Grid.Row="1" Grid.Column="0" Content="{Binding Dweller.Health.IntegerValue}" />-->
+		<!--<TextBlock Grid.Row="1" Grid.Column="0" Text="{Binding Dweller.Food.IntegerValue}" />-->
+		<!--<TextBlock Grid.Row="2" Grid.Column="1" Text="{Binding Dweller.Position.Value}" />-->
+		<!--<TextBlock Grid.Row="3" Grid.Column="1" Text="{Binding Dweller.Birthday.AgeRounded}" />-->
+	</Grid>
+
+
+
+</UserControl>

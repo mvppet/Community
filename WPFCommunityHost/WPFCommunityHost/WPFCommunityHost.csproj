@@ -1,0 +1,205 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="..\..\packages\NUnit.3.11.0\build\NUnit.props" Condition="Exists('..\..\packages\NUnit.3.11.0\build\NUnit.props')" />
+  <Import Project="..\..\packages\SpecRun.Runner.1.8.5\build\SpecRun.Runner.props" Condition="Exists('..\..\packages\SpecRun.Runner.1.8.5\build\SpecRun.Runner.props')" />
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{4AB9051C-F21F-452B-AD10-021349EAD560}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <RootNamespace>WPFCommunityHost</RootNamespace>
+    <AssemblyName>WPFCommunityHost</AssemblyName>
+    <TargetFrameworkVersion>v4.6.1</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <ProjectTypeGuids>{60dc8134-eba5-43b8-bcc9-bb4bc16c2548};{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</ProjectTypeGuids>
+    <WarningLevel>4</WarningLevel>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+    <Deterministic>true</Deterministic>
+    <NuGetPackageImportStamp>
+    </NuGetPackageImportStamp>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Newtonsoft.Json, Version=12.0.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL">
+      <HintPath>..\..\packages\Newtonsoft.Json.12.0.1\lib\net45\Newtonsoft.Json.dll</HintPath>
+    </Reference>
+    <Reference Include="nunit.framework, Version=3.11.0.0, Culture=neutral, PublicKeyToken=2638cd05610744eb, processorArchitecture=MSIL">
+      <HintPath>..\..\packages\NUnit.3.11.0\lib\net45\nunit.framework.dll</HintPath>
+    </Reference>
+    <Reference Include="SpecRun.SpecFlowPlugin, Version=1.8.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\..\packages\SpecRun.SpecFlow.2-4-0.1.8.5\lib\net45\SpecRun.SpecFlowPlugin.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Runtime.CompilerServices.Unsafe, Version=4.0.4.1, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <HintPath>..\..\packages\System.Runtime.CompilerServices.Unsafe.4.5.2\lib\netstandard2.0\System.Runtime.CompilerServices.Unsafe.dll</HintPath>
+    </Reference>
+    <Reference Include="System.ValueTuple, Version=4.0.3.0, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
+      <HintPath>..\..\packages\System.ValueTuple.4.5.0\lib\net461\System.ValueTuple.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Xml" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Xaml">
+      <RequiredTargetFramework>4.0</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="TechTalk.SpecFlow, Version=2.4.0.0, Culture=neutral, PublicKeyToken=0778194805d6db41, processorArchitecture=MSIL">
+      <HintPath>..\..\packages\SpecFlow.2.4.1\lib\net45\TechTalk.SpecFlow.dll</HintPath>
+    </Reference>
+    <Reference Include="TechTalk.SpecRun, Version=1.8.0.0, Culture=neutral, PublicKeyToken=d0fc5cc18b3b389b, processorArchitecture=MSIL">
+      <HintPath>..\..\packages\SpecRun.SpecFlow.2-4-0.1.8.5\lib\net45\TechTalk.SpecRun.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="TechTalk.SpecRun.Common, Version=1.8.0.0, Culture=neutral, PublicKeyToken=d0fc5cc18b3b389b, processorArchitecture=MSIL">
+      <HintPath>..\..\packages\SpecRun.SpecFlow.2-4-0.1.8.5\lib\net45\TechTalk.SpecRun.Common.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Unity.Abstractions, Version=5.11.4.0, Culture=neutral, PublicKeyToken=489b6accfaf20ef0, processorArchitecture=MSIL">
+      <HintPath>..\..\packages\Unity.5.11.4\lib\net46\Unity.Abstractions.dll</HintPath>
+    </Reference>
+    <Reference Include="Unity.Container, Version=5.11.5.0, Culture=neutral, PublicKeyToken=489b6accfaf20ef0, processorArchitecture=MSIL">
+      <HintPath>..\..\packages\Unity.5.11.4\lib\net46\Unity.Container.dll</HintPath>
+    </Reference>
+    <Reference Include="WindowsBase" />
+    <Reference Include="PresentationCore" />
+    <Reference Include="PresentationFramework" />
+  </ItemGroup>
+  <ItemGroup>
+    <ApplicationDefinition Include="App.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </ApplicationDefinition>
+    <Compile Include="Setup\IoCRegistration.cs" />
+    <Compile Include="WindowFurniture\HelpBar.xaml.cs">
+      <DependentUpon>HelpBar.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="WindowFurniture\SideBar.xaml.cs">
+      <DependentUpon>SideBar.xaml</DependentUpon>
+    </Compile>
+    <Page Include="WindowFurniture\HelpBar.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="MainWindow.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Compile Include="App.xaml.cs">
+      <DependentUpon>App.xaml</DependentUpon>
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="MainWindow.xaml.cs">
+      <DependentUpon>MainWindow.xaml</DependentUpon>
+      <SubType>Code</SubType>
+    </Compile>
+    <Page Include="WindowFurniture\SideBar.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Properties\AssemblyInfo.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <None Include="Default.srprofile" />
+    <None Include="packages.config">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="runtests.cmd" />
+    <None Include="SpecRunTestProfile.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="SpecRunTestProfile_2011_09.xsd">
+      <SubType>Designer</SubType>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\..\..\GeneralWPFClassLibrary\GeneralWPFClassLibrary.csproj">
+      <Project>{80923302-6838-48C1-AB57-CAC1090C7BEC}</Project>
+      <Name>GeneralWPFClassLibrary</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\..\GeneralWPFControlLibraryInterfaces\GeneralWPFControlLibraryInterfaces.csproj">
+      <Project>{45654d80-4724-4dcd-bc34-f9d1ee897f94}</Project>
+      <Name>GeneralWPFControlLibraryInterfaces</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\..\GeneralWPFControlLibraryViewModels\GeneralWPFControlLibraryViewModels.csproj">
+      <Project>{6F55B084-9C1C-4AD6-AA03-2D4D4D806D44}</Project>
+      <Name>GeneralWPFControlLibraryViewModels</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\..\GeneralWPFControlLibrary\GeneralWPFControlLibrary.csproj">
+      <Project>{67711060-CF3E-47A3-8960-7F33B85DB426}</Project>
+      <Name>GeneralWPFControlLibrary</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\CommunityClassLibraryInterfaces\CommunityClassLibraryInterfaces.csproj">
+      <Project>{05d687e0-8ac4-43b2-874e-741efe4ee963}</Project>
+      <Name>CommunityClassLibraryInterfaces</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\CommunityClassLibrary\CommunityClassLibrary.csproj">
+      <Project>{9B94B906-CDBE-4874-BDA6-B0057395056E}</Project>
+      <Name>CommunityClassLibrary</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\CommunityControlLibrary\CommunityControlLibrary.csproj">
+      <Project>{0a43d4c6-04cd-48ad-8280-59d7b19a6e89}</Project>
+      <Name>CommunityControlLibrary</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\CommunityViewModels\CommunityViewModels.csproj">
+      <Project>{8DBB7F65-2439-4897-A570-A08780408BC2}</Project>
+      <Name>CommunityViewModels</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">
+    <PropertyGroup>
+      <ErrorText>This project references NuGet package(s) that are missing on this computer. Use NuGet Package Restore to download them.  For more information, see http://go.microsoft.com/fwlink/?LinkID=322105. The missing file is {0}.</ErrorText>
+    </PropertyGroup>
+    <Error Condition="!Exists('..\..\packages\SpecRun.Runner.1.8.5\build\SpecRun.Runner.props')" Text="$([System.String]::Format('$(ErrorText)', '..\..\packages\SpecRun.Runner.1.8.5\build\SpecRun.Runner.props'))" />
+    <Error Condition="!Exists('..\..\packages\SpecRun.SpecFlow.2-4-0.1.8.5\build\SpecRun.SpecFlow.2-4-0.targets')" Text="$([System.String]::Format('$(ErrorText)', '..\..\packages\SpecRun.SpecFlow.2-4-0.1.8.5\build\SpecRun.SpecFlow.2-4-0.targets'))" />
+    <Error Condition="!Exists('..\..\packages\NUnit.3.11.0\build\NUnit.props')" Text="$([System.String]::Format('$(ErrorText)', '..\..\packages\NUnit.3.11.0\build\NUnit.props'))" />
+    <Error Condition="!Exists('..\..\packages\SpecFlow.2.4.1\build\SpecFlow.targets')" Text="$([System.String]::Format('$(ErrorText)', '..\..\packages\SpecFlow.2.4.1\build\SpecFlow.targets'))" />
+  </Target>
+  <Import Project="..\..\packages\SpecRun.SpecFlow.2-4-0.1.8.5\build\SpecRun.SpecFlow.2-4-0.targets" Condition="Exists('..\..\packages\SpecRun.SpecFlow.2-4-0.1.8.5\build\SpecRun.SpecFlow.2-4-0.targets')" />
+  <Import Project="..\..\packages\SpecFlow.2.4.1\build\SpecFlow.targets" Condition="Exists('..\..\packages\SpecFlow.2.4.1\build\SpecFlow.targets')" />
+</Project>

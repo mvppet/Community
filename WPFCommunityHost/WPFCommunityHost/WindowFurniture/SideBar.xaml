@@ -1,0 +1,58 @@
+﻿<UserControl x:Class="WPFCommunityHost.SideBar"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:local="clr-namespace:WPFCommunityHost"
+	        xmlns:Models="clr-namespace:CommunityViewModels;assembly=CommunityViewModels"
+             mc:Ignorable="d" 
+             d:DesignHeight="350" d:DesignWidth="300" FontSize="9" >
+	<d:UserControl.DataContext>
+		<Models:SideBarViewModel />
+	</d:UserControl.DataContext>
+	<!--<UserControl.Resources>
+		<Style TargetType="Button">
+			<Setter Property="Margin" Value="2,2,2,0"/>
+		</Style>
+		<Style TargetType="Label">
+			<Setter Property="FontWeight" Value="Bold"/>
+			<Setter Property="Margin" Value="0,0,2,0"/>
+			<Setter Property="Padding" Value="2,0,4,0"/>
+			<Setter Property="Background" Value="#eee"/>
+		</Style>
+		<Style TargetType="TextBlock">
+			<Setter Property="Margin" Value="0"/>
+			<Setter Property="Padding" Value="4,0,2,0"/>
+		</Style>
+	</UserControl.Resources>
+	<DockPanel>
+		<Button Command="{Binding NewDwellerCommand}" CommandParameter="NewNormalDweller" DockPanel.Dock="Top">New Normal Dweller</Button>
+		<Button Visibility="Collapsed" Command="{Binding NewDwellerCommand}" CommandParameter="NewHome" DockPanel.Dock="Top">New Home</Button>
+		<DataGrid ItemsSource="{Binding DwellerViewModels, Mode=OneWay, UpdateSourceTrigger=PropertyChanged}" AutoGenerateColumns="False" GridLinesVisibility="Horizontal" SelectionChanged="DataGrid_SelectionChanged" IsReadOnly="True">
+			<DataGrid.CellStyle>
+				<Style TargetType="DataGridCell">
+					<Style.Triggers>
+						<Trigger Property="IsSelected" Value="True">
+							<Setter Property="Background" Value="Yellow" />
+							<Setter Property="Foreground" Value="Black" />
+							<Setter Property="BorderBrush" Value="{Binding HealthColor}" />
+						</Trigger>
+					</Style.Triggers>
+				</Style>
+			</DataGrid.CellStyle>
+			<DataGrid.Columns>
+				<DataGridTextColumn Header="ID" Binding="{Binding Id}" Width="30" />
+				<DataGridTextColumn Header="Name" Binding="{Binding Name}" Width="100" />
+				<DataGridTextColumn Header="Position" Binding="{Binding Dweller.Position.StringValue}"  Width="50" />
+				<DataGridTextColumn Header="Health" Binding="{Binding Dweller.Health.RoundedValue}"  Width="40" />
+				<DataGridTextColumn Header="Food" Binding="{Binding Dweller.Food.RoundedValue}"  Width="40" />
+				<DataGridTextColumn Header="Age" Binding="{Binding Dweller.Birthday.AgeRounded}"  Width="40" />
+			</DataGrid.Columns>
+			<DataGrid.RowStyle>
+				<Style TargetType="DataGridRow">
+					<Setter Property="Background" Value="{Binding HealthColor}"/>
+				</Style>
+			</DataGrid.RowStyle>
+		</DataGrid>
+	</DockPanel>-->
+</UserControl>
